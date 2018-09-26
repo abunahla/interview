@@ -1,0 +1,17 @@
+{% extends 'base.html'%} 
+{% load crispy_forms_tags %}
+ {% block style%}
+ <div class="row">
+ <div class="col-md-6 col-md-offset-3">
+ <h2>Welcome</h2>
+ <p>Please Fill the form below to regiter with us</p>
+ <form method="post">
+ 	{% csrf_token%}
+ 	{{ form|crispy}}
+ 	<p>If you already have an account then<a href="/accounts/login">Click Here</a></p>
+ 	<button class="btn btn-primary"type="submit">Register</button>
+ </form>
+ </div>
+</div>
+
+ {% endblock%}

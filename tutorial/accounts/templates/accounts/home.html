@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block style%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home page</title>
+</head>
+<body>
+	<div class="container-fluid">
+<h1>Welcome To Zalego Institute</h1>
+	<p>{{ user }}</p>
+	<br><p>Your firstname is {{ user.first_name }}</p>
+<a type ="button"class="btn btn-danger" href=""> Login </a>
+<button class="btn btn-primary">work</button>
+<ul>
+	{% for num in numbers %}
+	<li>{{num}}</li>
+	{% endfor %}
+</ul>
+<br>
+<h5>You may edit your details here</h5>
+<a type="button" class="btn btn-primary" href="/accounts/profile/edit"> Edit</a>
+</div>
+</body>
+</html>
+{%endblock%}

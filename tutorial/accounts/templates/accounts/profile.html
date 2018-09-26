@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{%  block style %}
+<div class="col-md-offset-3">
+<div class="container-fluid">
+	<h2>Welocome To Your profile</h2>
+
+	<h4>Your Details are</h4>
+	<ul>
+		<li>Your firstname is {{ user.first_name }}</li>
+		<li>Your lastname is {{ user.last_name }}</li>
+		<li>Your Username is {{ user }}</li>
+
+	</ul><br><br>
+<a type="button"  class="btn btn-primary" href="/accounts/logout">Log Out</a>
+<a type="button"  class="btn btn-primary" href="/accounts/profile/edit">Edit Details</a>
+</div>
+</div>
+{% endblock %}
